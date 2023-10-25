@@ -2,14 +2,14 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import pandas as pd
+from utils import changeReferencePoint, normalizeCoords
 
-
-def changeReferencePoint(pointCoords, newRefPointCoords):
-    return [pointCoords[0] - newRefPointCoords[0], pointCoords[1] - newRefPointCoords[1]]
-
-
-def normalizeCoords(pointCoords, normFactorX, normFactorY):
-    return [pointCoords[0] / normFactorX, pointCoords[1] / normFactorY]
+# def changeReferencePoint(pointCoords, newRefPointCoords):
+#     return [pointCoords[0] - newRefPointCoords[0], pointCoords[1] - newRefPointCoords[1]]
+#
+#
+# def normalizeCoords(pointCoords, normFactorX, normFactorY):
+#     return [pointCoords[0] / normFactorX, pointCoords[1] / normFactorY]
 
 
 cap = cv2.VideoCapture(0)
