@@ -5,6 +5,7 @@ audioOutputIndexes = [1, 2]
 
 def run(cmd, text):
     completed = subprocess.run(["powershell", "-Command", cmd], capture_output=True, text=text)
+    print(completed.stdout)
     return completed
 
 
